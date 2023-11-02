@@ -14,8 +14,39 @@
     <style>
       /* Light background, with a strong, playful purple logo */
       body {
-        background-color: #f8f9fa;
+        background-color: #fdf6ee;
+        background-image: url('./background.svg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
       }
+
+/* Ensure this is included after the Bootstrap CSS link */
+:root {
+  --primary-color: #6f42c1; /* Bootstrap's purple color */
+}
+
+/* Override Bootstrap's .btn-outline-primary styles */
+.btn-outline-primary {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+/* Override default link color for anchor tags */
+a, a:link, a:visited {
+  color: var(--primary-color);
+}
+/* Override the link color on hover */
+a:hover, a:focus {
+  color: darken(var(--primary-color), 10%);
+}
+
+
       .text-purple {
         /* plum color */
         color: #9541b3;
@@ -26,10 +57,20 @@
         font-weight: normal;
         font-style: normal;
       }
+
+      /* Scrollable but no scrollbar */
+      .nav-pills {
+        overflow-x: auto;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      }
+      .nav-pills::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari and Opera */
+      }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg my-5">
       <div class="container-lg">
         <div>
           <span class="text-purple font-logo fs-1">Plum Class</span>
@@ -61,25 +102,26 @@
       </div>
     </nav>
 
-    <aside class="container-lg">
+    <aside class="container-lg my-5 py-lg-2">
+      <!--
       <figure>
-        <!-- cover full width, up to 500px tall, ./bg.jpg -->
-        <img src="./bg.jpg" class="img-fluid" style="object-fit: cover; max-height: 300px; width: 100%;" alt="...">
+        <img src="./header.jpg" class="img-fluid" style="object-fit: cover; max-height: 300px; width: 100%;" alt="...">
       </figure>
+      -->
     </aside>
 
     <!-- fat nav bar showing: Healthcare, Transportation, Construction and Heavy Machinery, Finance, Real Estate, Education, IT and Cybersecurity, Hospitality and Food Service, Security, Energy. Anything that does not fit horizontally scrolls. -->
     <section class="container-lg">
-      <nav class="nav nav-pills flex-nowrap" style="overflow-x: auto;">
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Transportation</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Construction and Heavy Machinery</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Finance</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Real Estate</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Education</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">IT and Cybersecurity</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Hospitality and Food Service</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Security</a>
-        <a class="flex-sm-fill text-sm-center nav-link text-nowrap" href="#" style="display: inline-block;">Energy</a>
+      <nav class="nav nav-pills flex-nowrap">
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #faedff">Transportation</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #f5e2fd">Construction and Heavy Machinery</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #f3d5ff">Finance</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #edcdf9">Real Estate</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #f0d0fd">Education</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #ecc3fc">IT and Cybersecurity</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #efc8fe">Hospitality and Food Service</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #ecbcff">Security</a>
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #ebb7ff">Energy</a>
       </nav>
     </section>
 
@@ -97,7 +139,7 @@
         <div class="col-12 col-lg-8 mb-4">
           <h2 class="font-logo text-purple">Your career</h2>
           <div class="row row-cols-1 row-cols-lg-2">
-            <div class="col">
+            <div class="col mb-4">
               <div class="border border-5 rounded rounded-5 overflow-hidden">
                 <img src="./career-nurse-anesthetist.png" class="img-fluid" alt="...">
                 <div class="p-2">
@@ -138,7 +180,98 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+
+            <div class="col mb-4">
+              <div class="border border-5 rounded rounded-5 overflow-hidden">
+                <img src="./career-forklift-operator.png" class="img-fluid" alt="Image of Forklift Operator">
+                <div class="p-2">
+                  <h3 class="fs-5 font-logo text-purple">Forklift operator</h3>
+                  <p>Median salary: $55,250</p>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Forklift Certification
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Safety and Health Regulations
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Warehouse Operations
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Inventory Management
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Equipment Maintenance
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col mb-4">
+              <div class="border border-5 rounded rounded-5 overflow-hidden">
+                <img src="./career-cybersecurity-specialist.png" class="img-fluid" alt="Image of Cybersecurity Specialist">
+                <div class="p-2">
+                  <h3 class="fs-5 font-logo text-purple">Cybersecurity specialist</h3>
+                  <p>Median salary: $99,730</p> <!-- Update this with the specific median salary for your region -->
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Certified Information Systems Security Professional (CISSP)
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Certified Ethical Hacker (CEH)
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        CompTIA Security+
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Network Security
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Information Assurance
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
+                      <a href="#" class="stretched-link">
+                        Cybersecurity Degree or Bootcamp
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col mb-4">
               <div class="border border-5 rounded rounded-5 overflow-hidden">
                 <img src="./career-radiologic-technologist.png" class="img-fluid" alt="Image of Radiologic Technologist">
                 <div class="p-2">
@@ -180,6 +313,7 @@
               </div>
             </div>
             
+            <p class="mt-4"><a href="careers/located-usa-pennsylvania">See top careers in <strong>Pennsylvania</strong>&hellip;</a></p>
 
           </div>
         </div>
@@ -220,7 +354,7 @@
         </div>
       </div>
     </section>
-    <footer class="text-bg-dark">
+    <footer class="text-bg-dark" style="background:#9541b3 !important">
       <div class="container py-5 mt-5">
         <div class="row row-cols-1 row-cols-lg-3">
           <div class="col">
