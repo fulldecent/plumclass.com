@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <!--
     Targeting keywords: ?
@@ -7,10 +9,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plum Class</title>
-    <meta name="description" content="Plum Class TODO">
+    <meta name="description" content="Plum Class">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/jellee-typeface" type="text/css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <style>
       /* Light background, with a strong, playful purple logo */
       body {
@@ -110,18 +113,12 @@ a:hover, a:focus {
       -->
     </aside>
 
-    <!-- fat nav bar showing: Healthcare, Transportation, Construction and Heavy Machinery, Finance, Real Estate, Education, IT and Cybersecurity, Hospitality and Food Service, Security, Energy. Anything that does not fit horizontally scrolls. -->
+    <!-- Loop through categories to make nav links-->
     <section class="container-lg">
-      <nav class="nav nav-pills flex-nowrap">
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #faedff">Transportation</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #f5e2fd">Construction and Heavy Machinery</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #f3d5ff">Finance</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #edcdf9">Real Estate</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #f0d0fd">Education</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #ecc3fc">IT and Cybersecurity</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #efc8fe">Hospitality and Food Service</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #ecbcff">Security</a>
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="#" style="background: #ebb7ff">Energy</a>
+      <nav class="nav nav-pills flex-nowrap" id="categories">
+        {% for category in site.data.categories %}
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="/categories/{{ category.category }}">{{ category.name }}</a>
+        {% endfor %}
       </nav>
     </section>
 
@@ -135,186 +132,34 @@ a:hover, a:focus {
     </section>
 
     <section class="container-lg mt-5">
+
+
       <div class="row">
         <div class="col-12 col-lg-8 mb-4">
-          <h2 class="font-logo text-purple">Your career</h2>
-          <div class="row row-cols-1 row-cols-lg-2">
+          <div class="row row-cols-1 row-cols-lg-3">
+            {% assign careers = site.careers | sample: site.careers.size %}
+            {% for career in careers %}
             <div class="col mb-4">
               <div class="border border-5 rounded rounded-5 overflow-hidden">
-                <img src="./career-nurse-anesthetist.png" class="img-fluid" alt="...">
+                <img src="assets/careers/{{ career.slug }}.png" class="img-fluid" alt="...">
                 <div class="p-2">
-                  <h3 class="fs-5 font-logo text-purple">Nurse anesthetist</h3>
-                  <p>Median salary: $183,580</p>
+                  <h3 class="fs-5 font-logo text-purple">{{ career.title }}</h3>
+                  <p>Median salary: {{ career.median-salary }}</p>
                   <ul class="list-group">
+                    {% assign required-courses = career.required-courses | sample: career.required-courses.size %}
+                    {% for required-course in required-courses %}
                     <li class="list-group-item">
                       <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
                       <a href="#" class="stretched-link">
-                        Advanced Cardiac Life Support (ACLS)
+                        {{ required-course }}
                       </a>
                     </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Basic Life Support (BLS)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Pediatric Advanced Life Support (PALS)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Neonatal Resuscitation Program (NRP)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Certified Registered Nurse Anesthetist (CRNA)
-                      </a>
-                    </li>
+                    {% endfor %}
                   </ul>
                 </div>
-              </div>
+              </div>  
             </div>
-
-            <div class="col mb-4">
-              <div class="border border-5 rounded rounded-5 overflow-hidden">
-                <img src="./career-forklift-operator.png" class="img-fluid" alt="Image of Forklift Operator">
-                <div class="p-2">
-                  <h3 class="fs-5 font-logo text-purple">Forklift operator</h3>
-                  <p>Median salary: $55,250</p>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Forklift Certification
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Safety and Health Regulations
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Warehouse Operations
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Inventory Management
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Equipment Maintenance
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col mb-4">
-              <div class="border border-5 rounded rounded-5 overflow-hidden">
-                <img src="./career-cybersecurity-specialist.png" class="img-fluid" alt="Image of Cybersecurity Specialist">
-                <div class="p-2">
-                  <h3 class="fs-5 font-logo text-purple">Cybersecurity specialist</h3>
-                  <p>Median salary: $99,730</p> <!-- Update this with the specific median salary for your region -->
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Certified Information Systems Security Professional (CISSP)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Certified Ethical Hacker (CEH)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        CompTIA Security+
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Network Security
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Information Assurance
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Cybersecurity Degree or Bootcamp
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col mb-4">
-              <div class="border border-5 rounded rounded-5 overflow-hidden">
-                <img src="./career-radiologic-technologist.png" class="img-fluid" alt="Image of Radiologic Technologist">
-                <div class="p-2">
-                  <h3 class="fs-5 font-logo text-purple">Radiologic technologist</h3>
-                  <p>Median salary: $62,280</p>
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Radiography
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Magnetic Resonance Imaging (MRI)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Computed Tomography (CT)
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Sonography
-                      </a>
-                    </li>
-                    <li class="list-group-item">
-                      <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        Radiologic Technology Certification
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <p class="mt-4"><a href="careers/located-usa-pennsylvania">See top careers in <strong>Pennsylvania</strong>&hellip;</a></p>
-
+            {% endfor %}
           </div>
         </div>
         <div class="col-12 col-lg-4">

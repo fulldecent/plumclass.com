@@ -1,2 +1,7 @@
-# Jekyll
 /_site
+/vendor
+
+# Becuase GitHub Pages uses its own version and not the one in your lock file
+Gemfile.lock
+
+/.bundle

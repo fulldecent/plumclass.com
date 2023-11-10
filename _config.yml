@@ -1,0 +1,6 @@
+include:
+  - '_careers'
+collections:
+  careers:
+    output: true
+    permalink: /careers/:collection/:name

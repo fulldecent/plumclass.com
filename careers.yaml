@@ -1,0 +1,130 @@
+- title: Nurse anesthetist
+  slug: nurse-anesthetist
+  category: Healthcare
+  median_salary: $183,580
+  required-courses:
+    - Advanced Cardiac Life Support (ACLS)
+    - Basic Life Support (BLS)
+    - Pediatric Advanced Life Support (PALS)
+    - Neonatal Resuscitation Program (NRP)
+    - Certified Registered Nurse Anesthetist (CRNA)
+- title: Forklift operator
+  slug: forklift-operator
+  category: Construction and Heavy Equipment
+  median_salary: $55,250
+  required-courses:
+    - Forklift Certification
+    - Safety and Health Regulations
+    - Warehouse Operations
+    - Inventory Management
+    - Equipment Maintenance
+- title: Cybersecurity specialist
+  slug: cybersecurity-specialist
+  category: IT and Cybersecurity
+  median_salary: $99,730
+  required-courses:
+    - Certified Information Systems Security Professional (CISSP)
+    - Certified Ethical Hacker (CEH)
+    - CompTIA Security+
+    - Network Security
+    - Information Assurance
+- title: Radiologic technologist
+  slug: radiologic-technologist
+  category: Healthcare
+  median_salary: $62,280
+  required-courses:
+    - Radiography
+    - Magnetic Resonance Imaging (MRI)
+    - Computed Tomography (CT)
+    - Sonography
+    - Radiologic Technology Certification
+- title: Pharmacist
+  slug: pharmacist
+  category: Healthcare
+  median_salary: $128,090
+  required-courses:
+    - Immunizations/Vaccines
+    - Opioid Related, Substance Abuse related, or Addiction Related CE
+    - Pharmacy Law
+    - Medication Safety/Errors
+    - Controlled Substances
+    - Complex Non-Sterile Compounding
+    - Sterile Compounding
+    - Opioid Abuse/Prevention
+- title: Pharmacy Technician
+  slug: pharmacy-technician
+  category: Healthcare
+  median_salary: $33,950
+  required-courses:
+    - Pharmacy Law: 2 hours for delinquent licensees
+- title: Childcare Worker
+  slug: childcare-worker
+  category: Education
+  median_salary: $25,460
+  required-courses:
+    - Medication Administration: every 2 years
+- title: Dentist
+  slug: dentist
+  category: Healthcare
+  median_salary: $164,010
+  required-courses:
+    - Chemical and Related Effects of Tobacco
+    - Dental Jurisprudence and Ethics
+    - CDC Infection Control Guidelines
+    - Prescription of Controlled Substances
+    - Pharmacology, Anesthesia, Emergency Medicine, or Sedation
+    - Sterilization and Infection Control
+    - Human Trafficking
+    - Safe and Effective Pain Management
+    - Approved Procedures for Prescribing and Monitoring Controlled Substances
+- title: Dental Hygienist
+  slug: dental-hygienist
+  category: Healthcare
+  median_salary: $77,090
+  required-courses:
+    - CDC Infection Control Guidelines
+    - Sterilization and Infection Control
+    - Chemical Dependency
+- title: Immunizing Pharmacist
+  slug: immunizing-pharmacist
+  category: Healthcare
+  median_salary: Varies
+  required-courses:
+    - Administering Injections/Vaccines
+    - Immunizations
+- title: Commercial Airline Pilot
+  slug: commercial-airline-pilot
+  category: Transportation
+  median_salary: $130,440
+  required-courses:
+    - Commercial Pilot License (CPL)
+    - Airline Transport Pilot License (ATPL)
+    - Instrument Rating (IR)
+    - Multi-Engine Rating
+    - First Aid and CPR Certification
+- title: Construction Manager
+  slug: construction-manager
+  category: Construction and Heavy Machinery
+  median_salary: $97,180
+  required-courses:
+    - OSHA Safety Certification
+    - Construction Management Certification
+    - Project Management Professional (PMP)
+    - First Aid and CPR Certification
+- title: Financial Analyst
+  slug: financial-analyst
+  category: Finance
+  median_salary: $83,660
+  required-courses:
+    - Chartered Financial Analyst (CFA)
+    - Financial Risk Manager (FRM)
+    - Series 7 License
+    - Series 63 License
+- title: Real Estate Agent
+  slug: real-estate-agent
+  category: Real Estate
+  median_salary: $51,220
+  required-courses:
+    - Real Estate License
+    - Continuing Education in Real Estate Practices
+    - Fair Housing Laws Training

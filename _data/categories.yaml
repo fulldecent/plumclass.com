@@ -1,0 +1,18 @@
+- category: transportation
+  name: Transportation
+- category: construction-and-heavy-machinery
+  name: Construction and heavy machinery
+- category: finance
+  name: Finance
+- category: real-estate
+  name: Real estate
+- category: education
+  name: Education
+- category: it-and-cybersecurity
+  name: IT and cybersecurity
+- category: hospitality-and-food-service
+  name: Hospitality and food service
+- category: security
+  name: Security
+- category: energy
+  name: Energy
