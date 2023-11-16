@@ -1,5 +1,5 @@
 ---
-title: Real Estate Agent
+title: Real estate agent
 category: Real Estate
 median-salary: $51,220
 required-courses:

@@ -1,5 +1,5 @@
 ---
-title: Construction Manager
+title: Construction manager
 category: Construction and Heavy Machinery
 median-salary: $97,180
 required-courses:

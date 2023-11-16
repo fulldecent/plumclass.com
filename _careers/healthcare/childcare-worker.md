@@ -1,5 +1,5 @@
 ---
-title: Childcare Worker
+title: Childcare worker
 category: Education
 median-salary: $25,460
 required-courses:

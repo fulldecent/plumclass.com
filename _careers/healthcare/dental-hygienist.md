@@ -1,5 +1,5 @@
 ---
-title: Dental Hygienist
+title: Dental hygienist
 category: Healthcare
 median-salary: $77,090
 required-courses:

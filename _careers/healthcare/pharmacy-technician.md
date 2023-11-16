@@ -1,5 +1,5 @@
 ---
-title: Pharmacy Technician
+title: Pharmacy technician
 category: Healthcare
 median-salary: $33,950
 required-courses:

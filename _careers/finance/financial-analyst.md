@@ -1,5 +1,5 @@
 ---
-title: Financial Analyst
+title: Financial analyst
 category: Finance
 median-salary: $83,660
 required-courses:

@@ -1,5 +1,5 @@
 ---
-title: Forklift Operator
+title: Forklift operator
 category: Construction and heavy machinery
 median-salary: $36,000
 required-courses:

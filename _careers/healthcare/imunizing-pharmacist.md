@@ -1,5 +1,5 @@
 ---
-title: Immunizing Pharmacist
+title: Immunizing pharmacist
 category: Healthcare
 median-salary: Varies
 required-courses:

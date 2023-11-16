@@ -1,5 +1,5 @@
 ---
-title: Commercial Airline Pilot
+title: Commercial airline pilot
 category: Transportation
 median-salary: $130,440
 required-courses:
