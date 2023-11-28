@@ -11,7 +11,6 @@ required-courses:
   - Sterilization and Infection Control
   - Human Trafficking
   - Safe and Effective Pain Management
-  - Approved Procedures for Prescribing and Monitoring Controlled Substances
----
+  - Approved Procedures for Prescribing and Monitoring Controlled Substances---
 
 Dentists diagnose and treat problems with patients’ teeth, gums, and related parts of the mouth. They provide advice and instruction on taking care of the teeth and gums and on diet choices that affect oral health.

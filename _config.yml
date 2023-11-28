@@ -1,6 +1,10 @@
-include:
-  - '_careers'
 collections:
   careers:
     output: true
-    permalink: /careers/:collection/:name
+    permalink: /career/:name
+  courses:
+    output: true
+    permalink: /course/:name
+  categories:
+    output: true
+    permalink: /category/:name

@@ -10,7 +10,6 @@ required-courses:
   - Controlled Substances
   - Complex Non-Sterile Compounding
   - Sterile Compounding
-  - Opioid Abuse/Prevention
----
+  - Opioid Abuse/Prevention---
 
 Pharmacists dispense prescription medications to patients and offer expertise in the safe use of prescriptions. They also may conduct health and wellness screenings, provide immunizations, oversee the medications given to patients, and provide advice on healthy lifestyles.

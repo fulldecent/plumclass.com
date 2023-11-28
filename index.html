@@ -116,9 +116,11 @@ a:hover, a:focus {
     <!-- Loop through categories to make nav links-->
     <section class="container-lg">
       <nav class="nav nav-pills flex-nowrap" id="categories">
-        {% for category in site.data.categories %}
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="/categories/{{ category.category }}">{{ category.name }}</a>
-        {% endfor %}
+        {% assign categories = site.categories | sample: site.categories.size -%}
+        {% for category in categories -%}
+          {% assign category_name = category | first -%}
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="/category/{{ category.slug }}">{{ category.name }}</a>
+        {% endfor -%}
       </nav>
     </section>
 
@@ -223,6 +225,7 @@ a:hover, a:focus {
             <ul class="list-unstyled">
               <li><a class="link-light" href="">Teach with us</a></li>
               <li><a class="link-light" href="">Student support</a></li>
+              <li><a class="link-light" href="courses">All courses</a></li>
               <li>3103 Philmont Ave. / Ste 308<br>Huntingdon Valley, PA 19006</li>
             </ul>
           </div>

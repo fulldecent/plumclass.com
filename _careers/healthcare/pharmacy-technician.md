@@ -3,7 +3,6 @@ title: Pharmacy technician
 category: Healthcare
 median-salary: $33,950
 required-courses:
-  - Pharmacy Law
----
+  - Pharmacy Law---
 
 Pharmacy technicians help pharmacists dispense prescription medication to customers or health professionals.
