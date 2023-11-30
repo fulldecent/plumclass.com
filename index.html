@@ -119,7 +119,8 @@ a:hover, a:focus {
         {% assign categories = site.categories | sample: site.categories.size -%}
         {% for category in categories -%}
           {% assign category_name = category | first -%}
-        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="/category/{{ category.slug }}">{{ category.name }}</a>
+        <!-- TODO: <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="/category/{{ category.slug }}">{{ category.name }}</a> -->
+        <a class="flex-sm-fill text-sm-center rounded-0 text-dark nav-link text-nowrap d-inline-block p-3" href="/category/construction-and-heavy-machinery">{{ category.name }}</a>
         {% endfor -%}
       </nav>
     </section>
@@ -143,17 +144,24 @@ a:hover, a:focus {
             {% for career in careers %}
             <div class="col mb-4">
               <div class="border border-5 rounded rounded-5 overflow-hidden">
-                <img src="assets/careers/{{ career.slug }}.png" class="img-fluid" alt="...">
+                <a href="/career/{{ career.slug }}">
+                  <img src="assets/careers/{{ career.slug }}.png" class="img-fluid" alt="...">
+                </a>
                 <div class="p-2">
-                  <h3 class="fs-5 font-logo text-purple">{{ career.title }}</h3>
+                  <h3 class="fs-5 font-logo text-purple">
+                    <a href="/career/{{ career.slug }}">
+                      {{ career.title }}
+                    </a>
+                  </h3>
                   <p>Median salary: {{ career.median-salary }}</p>
                   <ul class="list-group">
-                    {% assign required-courses = career.required-courses | sample: career.required-courses.size %}
-                    {% for required-course in required-courses %}
+                    {% assign required-classes = career.required-classes | sample: career.required-classes.size %}
+                    {% for required-class in required-classes %}
                     <li class="list-group-item">
                       <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-                      <a href="#" class="stretched-link">
-                        {{ required-course }}
+                      <!-- TODO: <a href="/class/{{ required-class }}"> -->
+                      <a href="/class/certified-revenue-cycle-representative">
+                        {{ required-class }}
                       </a>
                     </li>
                     {% endfor %}
@@ -165,38 +173,19 @@ a:hover, a:focus {
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <h2 class="font-logo text-purple mb-4">Top courses</h2>
+          <h2 class="font-logo text-purple mb-4">Top classes</h2>
           <ul class="list-group">
+            <!-- Load from _classes -->
+            {% assign classes = site.classes | sample: 10 %}
+            {% for class in classes %}
             <li class="list-group-item">
               <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-              <a href="#" class="stretched-link">
-                Advanced Cardiac Life Support (ACLS)
+              <!-- TODO: <a href="/class/{{ class.slug }}"> -->
+              <a href="/class/certified-revenue-cycle-representative">
+                {{ class.title }}
               </a>
             </li>
-            <li class="list-group-item">
-              <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-              <a href="#" class="stretched-link">
-                Basic Life Support (BLS)
-              </a>
-            </li>
-            <li class="list-group-item">
-              <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-              <a href="#" class="stretched-link">
-                Real Estate License
-              </a>
-            </li>
-            <li class="list-group-item">
-              <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-              <a href="#" class="stretched-link">
-                Forklift Certification
-              </a>
-            </li>
-            <li class="list-group-item">
-              <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
-              <a href="#" class="stretched-link">
-                Food Handler Certification
-              </a>
-            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -225,7 +214,7 @@ a:hover, a:focus {
             <ul class="list-unstyled">
               <li><a class="link-light" href="">Teach with us</a></li>
               <li><a class="link-light" href="">Student support</a></li>
-              <li><a class="link-light" href="courses">All courses</a></li>
+              <li><a class="link-light" href="classes">All classes</a></li>
               <li>3103 Philmont Ave. / Ste 308<br>Huntingdon Valley, PA 19006</li>
             </ul>
           </div>

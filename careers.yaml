@@ -2,7 +2,7 @@
   slug: nurse-anesthetist
   category: Healthcare
   median_salary: $183,580
-  required-courses:
+  required-classes:
     - Advanced Cardiac Life Support (ACLS)
     - Basic Life Support (BLS)
     - Pediatric Advanced Life Support (PALS)
@@ -12,7 +12,7 @@
   slug: forklift-operator
   category: Construction and Heavy Equipment
   median_salary: $55,250
-  required-courses:
+  required-classes:
     - Forklift Certification
     - Safety and Health Regulations
     - Warehouse Operations
@@ -22,7 +22,7 @@
   slug: cybersecurity-specialist
   category: IT and Cybersecurity
   median_salary: $99,730
-  required-courses:
+  required-classes:
     - Certified Information Systems Security Professional (CISSP)
     - Certified Ethical Hacker (CEH)
     - CompTIA Security+
@@ -32,7 +32,7 @@
   slug: radiologic-technologist
   category: Healthcare
   median_salary: $62,280
-  required-courses:
+  required-classes:
     - Radiography
     - Magnetic Resonance Imaging (MRI)
     - Computed Tomography (CT)
@@ -42,7 +42,7 @@
   slug: pharmacist
   category: Healthcare
   median_salary: $128,090
-  required-courses:
+  required-classes:
     - Immunizations/Vaccines
     - Opioid Related, Substance Abuse related, or Addiction Related CE
     - Pharmacy Law
@@ -55,19 +55,19 @@
   slug: pharmacy-technician
   category: Healthcare
   median_salary: $33,950
-  required-courses:
+  required-classes:
     - Pharmacy Law: 2 hours for delinquent licensees
 - title: Childcare Worker
   slug: childcare-worker
   category: Education
   median_salary: $25,460
-  required-courses:
+  required-classes:
     - Medication Administration: every 2 years
 - title: Dentist
   slug: dentist
   category: Healthcare
   median_salary: $164,010
-  required-courses:
+  required-classes:
     - Chemical and Related Effects of Tobacco
     - Dental Jurisprudence and Ethics
     - CDC Infection Control Guidelines
@@ -81,7 +81,7 @@
   slug: dental-hygienist
   category: Healthcare
   median_salary: $77,090
-  required-courses:
+  required-classes:
     - CDC Infection Control Guidelines
     - Sterilization and Infection Control
     - Chemical Dependency
@@ -89,14 +89,14 @@
   slug: immunizing-pharmacist
   category: Healthcare
   median_salary: Varies
-  required-courses:
+  required-classes:
     - Administering Injections/Vaccines
     - Immunizations
 - title: Commercial Airline Pilot
   slug: commercial-airline-pilot
   category: Transportation
   median_salary: $130,440
-  required-courses:
+  required-classes:
     - Commercial Pilot License (CPL)
     - Airline Transport Pilot License (ATPL)
     - Instrument Rating (IR)
@@ -106,7 +106,7 @@
   slug: construction-manager
   category: Construction and Heavy Machinery
   median_salary: $97,180
-  required-courses:
+  required-classes:
     - OSHA Safety Certification
     - Construction Management Certification
     - Project Management Professional (PMP)
@@ -115,7 +115,7 @@
   slug: financial-analyst
   category: Finance
   median_salary: $83,660
-  required-courses:
+  required-classes:
     - Chartered Financial Analyst (CFA)
     - Financial Risk Manager (FRM)
     - Series 7 License
@@ -124,7 +124,7 @@
   slug: real-estate-agent
   category: Real Estate
   median_salary: $51,220
-  required-courses:
+  required-classes:
     - Real Estate License
     - Continuing Education in Real Estate Practices
     - Fair Housing Laws Training

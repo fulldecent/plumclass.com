@@ -1,20 +1,20 @@
 ---
 ---
 
-{% for course in site.courses %}
+{% for class in site.classes %}
 <div class="col mb-4">
   <div class="border border-5 rounded rounded-5 overflow-hidden">
-    <img src="assets/courses/{{ course.slug }}.png" class="img-fluid" alt="...">
+    <img src="assets/classes/{{ class.slug }}.png" class="img-fluid" alt="...">
     <div class="p-2">
-      <h3 class="fs-5 font-logo text-purple">{{ course.title }}</h3>
-      <p>Price: {{ course.price }}</p>
+      <h3 class="fs-5 font-logo text-purple">{{ class.title }}</h3>
+      <p>Price: {{ class.price }}</p>
       <ul class="list-group">
-        {% assign required-courses = course.required-courses | sample: course.required-courses.size %}
-        {% for required-course in required-courses %}
+        {% assign required-classes = class.required-classes | sample: class.required-classes.size %}
+        {% for required-class in required-classes %}
         <li class="list-group-item">
           <button type="button" class="btn btn-outline-primary float-end"><i class="bi bi-cart-plus"></i></button>
           <a href="#" class="stretched-link">
-            {{ required-course }}
+            {{ required-class }}
           </a>
         </li>
         {% endfor %}

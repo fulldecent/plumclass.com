@@ -2,9 +2,26 @@ collections:
   careers:
     output: true
     permalink: /career/:name
-  courses:
+  classes:
     output: true
-    permalink: /course/:name
+    permalink: /class/:name
   categories:
     output: true
     permalink: /category/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "careers"
+    values:
+      layout: "career"
+  - scope:
+      path: ""
+      type: "classes"
+    values:
+      layout: "class"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
